@@ -10,9 +10,9 @@ const ordersByUser = async (req, res) => {
     if (query.length === 0) {
       throw new Error("INVALID USER");
     }
-    console.log("::::::::::::VALID USER::::::::::::\n");
+    console.log("::::::::::::VALID id_usuario::::::::::::\n");
 
-    res.status(200).send(query.length === 1 ? query[0] : query);
+    res.status(200).send(query);
   } catch (error) {
     console.log("::::::::::::INVALID USER::::::::::::\n");
     res.status(400).send({
